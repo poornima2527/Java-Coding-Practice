@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class RoundRobinMethod {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int child = sc.nextInt();
+        int chocolates = sc.nextInt();
+        int base = chocolates / child;
+        int extra = chocolates % child;
+        for (int i = 1; i <= children; i++) {
+            int count = base;
+            if (i <= extra) {
+                count++;  
+            }
+            System.out.println("Child " + i + " has " + count + " chocolates");
+        }
+    }
+}

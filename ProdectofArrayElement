@@ -1,0 +1,18 @@
+//DAY 3 : 1) Product of array element
+class ProductofArrayElement {
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3};
+        int n = nums.length;
+        int[] result = new int[n];
+        int totalProduct = 1;
+        for (int i = 0; i < n; i++) {
+            totalProduct *= nums[i];
+        }
+        for (int i = 0; i < n; i++) {
+            result[i] = totalProduct / nums[i];
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.print(result[i] + " ");
+        }
+    }
+}
