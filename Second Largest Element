@@ -1,22 +1,22 @@
-public class Main {
+import java.util.*;
+public class main {
     public static void main(String[] args) {
-
-        int[] arr = {10, 25, 7, 45, 18};
-
-        int max = arr[0];
-        int second = arr[0];
-
-        for (int i = 1; i < arr.length; i++) {
-
-            if (arr[i] > max) {
-                second = max;
-                max = arr[i];
-            } 
-            else if (arr[i] > second && arr[i] != max) {
-                second = arr[i];
-            }
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a[] = new int[n];
+        for(int i=0; i<n; i++) {
+            a[i] = sc.nextInt();
         }
-
-        System.out.println("Second Largest = " + second);
+        int m = a[0];
+        int sm = a[0];
+        for(int i=0;i<n;i++) {
+            if(a[i] > m) {
+                sm = m;
+                m = a[i];
+            }else if(a[i] > sm && a[i] != m){
+                sm = a[i];
+            } 
+        }
+        System.out.println(sm);
     }
 }
